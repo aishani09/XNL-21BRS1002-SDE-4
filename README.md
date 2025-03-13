@@ -16,21 +16,21 @@ The platform is built using MySQL with **InnoDB** for transaction integrity and 
  **ER Diagram**: See `/diagrams/er_diagram.png`
 
 ##  SQL Scripts
-All database scripts can be found in the `/sql` directory:
-- `schema.sql`: Creates all tables with constraints.
-- `queries.sql`: Contains optimized queries for analytics.
-- `optimization.sql`: Indexing and performance tuning scripts.
+All database scripts can be found in the `/sql-script` directory:
+- `xnl sql - Part 1.sql`: Creates all tables with constraints.
+- `xnl sql - Part 2.sql`: Contains optimized queries for analytics.
+- `xnl sql - Part 3.sql`: Indexing and performance tuning scripts.
 
 ##  Query Optimization & Performance Analysis
 - **Indexes & Partitioning**: Indexed high-usage columns and optimized table partitions.
 - **Query Optimization**: Used `EXPLAIN` to analyze slow queries and refactored subqueries.
-- **Performance Benchmarks**: Before & after improvements documented in `/reports/performance_benchmark.md`
+- **Performance Benchmarks**: Before & after improvements documented 
 
 ##  Setup & Installation
 1. Install **MySQL Workbench** and **MySQL Server**.
-2. Run `schema.sql` to initialize the database.
-3. Use `queries.sql` to fetch insights.
-4. Apply optimizations using `optimization.sql`.
+2. Run `xnl sql - Part 1.sql` to initialize the database.
+3. Use `xnl sql - Part 2.sql` to fetch insights.
+4. Apply optimizations using `xnl sql - Part 3.sql`.
 
 
 
