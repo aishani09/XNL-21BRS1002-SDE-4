@@ -43,9 +43,9 @@ def insert_users(n):
     try:
         cursor.executemany(query, users)
         db.commit()
-        print(f"✅ Inserted {n} users.")
+        print(f" Inserted {n} users.")
     except mysql.connector.errors.IntegrityError as e:
-        print(f"❌ IntegrityError: {e} - Skipping duplicates.")
+        print(f" IntegrityError: {e} - Skipping duplicates.")
         db.rollback()
 
 # ------------------- Insert Vendors -------------------
@@ -77,9 +77,9 @@ def insert_vendors(n):
     try:
         cursor.executemany(query, vendors)
         db.commit()
-        print(f"✅ Inserted {n} vendors.")
+        print(f" Inserted {n} vendors.")
     except mysql.connector.errors.IntegrityError as e:
-        print(f"❌ IntegrityError: {e} - Skipping duplicates.")
+        print(f" IntegrityError: {e} - Skipping duplicates.")
         db.rollback()
 
 # ------------------- Insert Accounts -------------------
@@ -105,7 +105,7 @@ def insert_accounts(n):
 
     cursor.executemany(query, accounts)
     db.commit()
-    print(f"✅ Inserted {n} accounts.")
+    print(f" Inserted {n} accounts.")
 
 # ------------------- Insert Transactions -------------------
 def insert_transactions(n):
@@ -134,7 +134,7 @@ def insert_transactions(n):
 
     cursor.executemany(query, transactions)
     db.commit()
-    print(f"✅ Inserted {n} transactions.")
+    print(f" Inserted {n} transactions.")
 
 # ------------------- Insert Market Data -------------------
 def insert_market_data(n):
@@ -160,9 +160,9 @@ def insert_market_data(n):
     try:
         cursor.executemany(query, assets)
         db.commit()
-        print(f"✅ Inserted {n} market data records.")
+        print(f" Inserted {n} market data records.")
     except mysql.connector.errors.IntegrityError as e:
-        print(f"❌ IntegrityError: {e} - Skipping duplicates.")
+        print(f" IntegrityError: {e} - Skipping duplicates.")
         db.rollback()
 
 # ------------------- Insert Audit Logs -------------------
@@ -187,7 +187,7 @@ def insert_audits(n):
 
     cursor.executemany(query, audits)
     db.commit()
-    print(f"✅ Inserted {n} audit logs.")
+    print(f" Inserted {n} audit logs.")
 
 # ------------------- Run Data Generation -------------------
 NUM_USERS = 100000
@@ -197,7 +197,7 @@ NUM_TRANSACTIONS = 500000
 NUM_MARKET_DATA = 5000
 NUM_AUDITS = 200000
 
-print("\n🚀 Inserting data, please wait...\n")
+print("\n Inserting data, please wait...\n")
 
 insert_users(NUM_USERS)
 insert_vendors(NUM_VENDORS)
